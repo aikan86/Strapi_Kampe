@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: strapi
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x  
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_HOST
+        fromDatabase:
+          name: strapi-db
+          property: host
+      - key: DATABASE_PORT
+        fromDatabase:
+          name: strapi-db
+          property: port
+      - key: DATABASE_NAME
+        fromDatabase:
+          name: strapi-db
+          property: database
+      - key: DATABASE_USERNAME
+        fromDatabase:
+          name: strapi-db
+          property: user
+      - key: DATABASE_PASSWORD
+        fromDatabase:
+          name: strapi-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+
+databases:
+  - name: strapi-db
+    plan: free
+    databaseName: strapi
