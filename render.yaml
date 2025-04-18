@@ -2,12 +2,11 @@ services:
   - type: web
     name: strapi
     env: node
-    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
-        value: 16.13.1
+        value: 18.x  
       - key: NODE_ENV
         value: production
       - key: DATABASE_HOST
