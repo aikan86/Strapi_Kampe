@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "singularName": "evento",
+    "pluralName": "eventos",
+    "displayName": "Evento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titolo"
+    },
+    "Data": {
+      "type": "datetime"
+    },
+    "Descrizione": {
+      "type": "text"
+    },
+    "Descrizione_Breve": {
+      "type": "text"
+    },
+    "Immagine": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Luogo": {
+      "type": "string"
+    },
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Musica",
+        "Cinema",
+        "Poesia",
+        "Arte",
+        "Creatività"
+      ]
+    },
+    "Evidenza": {
+      "type": "boolean"
+    },
+    "prezzo": {
+      "type": "decimal"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

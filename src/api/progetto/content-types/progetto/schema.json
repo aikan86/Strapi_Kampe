@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progettos",
+  "info": {
+    "singularName": "progetto",
+    "pluralName": "progettos",
+    "displayName": "Progetto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titolo"
+    },
+    "Descrizione": {
+      "type": "text"
+    },
+    "Sommario": {
+      "type": "text"
+    },
+    "Immagini": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Immagine_main": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Anno": {
+      "type": "integer"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Evidenza": {
+      "type": "boolean"
+    }
+  }
+}
