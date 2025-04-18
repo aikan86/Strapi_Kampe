@@ -7,8 +7,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com', '*.digitaloceanspaces.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com', '*.digitaloceanspaces.com'],
+          'img-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
         },
       },
@@ -18,15 +18,10 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       headers: '*',
       origin: [
         'http://localhost:3000',
-        'http://localhost:3001',
-        'http://localhost:3002',
-        'http://localhost:8000',
-        'https://tuosito.vercel.app',  // Sostituisci con l'URL del tuo frontend
-        'https://tuosito.netlify.app', // Sostituisci con altri URL se necessario
+        'https://kampe-website.vercel.app/' // Il tuo URL Vercel
       ]
     }
   },
