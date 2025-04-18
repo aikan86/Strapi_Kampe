@@ -25,10 +25,13 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {},
-  "engines": {
-    "node": ">=18.0.0 <=22.x.x",
-    "npm": ">=6.0.0"
-  },
+   "engines": {
+     "node": "16.x" // o la versione richiesta da Strapi
+   },
+   "scripts": {
+     "build": "strapi build",
+     "start": "strapi start"
+   }
   "strapi": {
     "uuid": "42f5152c-42ee-4bfe-8321-b1eed9d800c8"
   }
