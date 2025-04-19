@@ -1,9 +1,12 @@
-services:
-  - type: web
-    name: strapi
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+ services:
+   - type: web
+     name: kampe-strapi
+     env: node
+     buildCommand: npm install && npm run build
+     startCommand: npm start
+     envVars:
+       - key: PORT
+         value: 10000
     envVars:
       - key: NODE_VERSION
         value: 18.x  
