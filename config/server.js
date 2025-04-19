@@ -1,9 +1,8 @@
-   module.exports = ({ env }) => ({
-     host: env('HOST', '0.0.0.0'),
-     port: env.int('PORT', 1337),
-     app: {
-       keys: env.array('APP_KEYS')
-     },
-     url: 'https://strapi-kampe.onrender.com', // Assicurati che questo URL sia corretto
-   });
-   
+module.exports = ({ env }) => ({
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  app: {
+    keys: env.array('APP_KEYS'),
+  },
+});
+
